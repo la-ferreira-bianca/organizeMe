@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Things View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MyThingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MyThingsViewController" customModule="OrganizeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pD-1d-iba">
+                                <rect key="frame" x="15" y="48.000000000000007" width="190.33333333333334" height="71.666666666666686"/>
+                                <string key="text">Good Morning,
+Ester!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain.head.profile" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VAt-wa-MrO">
+                                <rect key="frame" x="286" y="46.333333333333336" width="74" height="77.333333333333343"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="74" id="bEn-iP-aHj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="bHY-Kd-fM8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new thing:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jm-su-Bkr">
+                                <rect key="frame" x="15" y="206" width="190.33333333333334" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3jV-Yd-TST">
+                                <rect key="frame" x="0.0" y="240" width="375" height="572"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Looking for something?" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-KK-zZK">
+                                <rect key="frame" x="10" y="127" width="355" height="51"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xbk-KK-zZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3Yr-uj-9nh"/>
+                            <constraint firstAttribute="bottom" secondItem="3jV-Yd-TST" secondAttribute="bottom" id="5Bt-jc-OkE"/>
+                            <constraint firstItem="VAt-wa-MrO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="8hU-CM-hCF"/>
+                            <constraint firstItem="9pD-1d-iba" firstAttribute="centerX" secondItem="3jm-su-Bkr" secondAttribute="centerX" id="9cY-TV-vIO"/>
+                            <constraint firstItem="3jV-Yd-TST" firstAttribute="top" secondItem="VAt-wa-MrO" secondAttribute="bottom" constant="118" id="BNs-xV-DWQ"/>
+                            <constraint firstItem="3jm-su-Bkr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="LiI-Dv-4E1"/>
+                            <constraint firstItem="3jV-Yd-TST" firstAttribute="top" secondItem="3jm-su-Bkr" secondAttribute="bottom" constant="10" id="O1N-nc-APe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VAt-wa-MrO" secondAttribute="trailing" constant="15" id="Pz8-Hp-jQP"/>
+                            <constraint firstItem="9pD-1d-iba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="a9j-oP-mHZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbk-KK-zZK" secondAttribute="trailing" constant="10" id="jha-WL-LzZ"/>
+                            <constraint firstItem="3jV-Yd-TST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4Y-oQ-uQf"/>
+                            <constraint firstItem="9pD-1d-iba" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="p9i-v0-zUn"/>
+                            <constraint firstItem="xbk-KK-zZK" firstAttribute="top" secondItem="VAt-wa-MrO" secondAttribute="bottom" constant="5" id="qAY-YZ-xKQ"/>
+                            <constraint firstItem="3jV-Yd-TST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tR2-Cs-F2X"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newThingLabel" destination="3jm-su-Bkr" id="0qc-x6-QXf"/>
+                        <outlet property="thingsTableView" destination="3jV-Yd-TST" id="Jki-t8-syb"/>
+                        <outlet property="welcomeLabel" destination="9pD-1d-iba" id="7lz-A1-JYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7.2000000000000002" y="97.536945812807886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brain.head.profile" catalog="system" width="114" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
